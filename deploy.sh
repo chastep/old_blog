@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
-gco master
 
 # abort on errors
 set -e
@@ -18,5 +17,3 @@ git add -A
 git commit -m 'deploy'
 
 git push -f git@github.com:chastep/chastep.github.io.git master
-
-cd -
