@@ -37,20 +37,25 @@ header {
   flex-direction: row;
   padding: 1.125rem;
 }
+
 .home {
   margin-right: 1.125rem;
 }
+
 .logo {
   order: 2;
   text-align: right;
 }
+
 .logo > svg {
   display: inline-block;
   transition: .33s ease-out;
 }
+
 .logo > svg:hover {
   opacity: 1;
 }
+
 .social {
   flex: 1;
   list-style: none;
@@ -58,9 +63,11 @@ header {
   text-align: right;
   order: 3;
 }
+
 .social li {
   display: inline-block;
 }
+
 .social li:not(:last-child) {
   margin-right: 0.72rem;
 }
