@@ -3,14 +3,14 @@
     <div class="home">
       <nuxt-link to="/">
         <div class="logo">
-          <i class="fas fa-tint fa-3x"></i>
+          <i class="fas fa-bolt fa-3x"></i>
         </div>
       </nuxt-link>
     </div>
 
     <ul class="social">
       <li v-for="soc in socials" :key="soc.url">
-        <a :href="soc.url" rel="nofollow">{{soc.name}}</a>
+        <a :href="soc.url" rel="nofollow"><i :class="soc.name"></i></a>
       </li>
     </ul>
   </header>
@@ -22,8 +22,8 @@ export default {
     return {
       status: undefined,
       socials: [
-        {name: 'github', url: 'https://github.com/chastep'},
-        {name: 'linkedin', url: 'https://www.linkedin.com/in/chase-stephens/'},
+        {name: 'fas fa-code-branch fa-lg', url: 'https://github.com/chastep'},
+        {name: 'fab fa-linkedin fa-lg', url: 'https://www.linkedin.com/in/chase-stephens/'},
       ]
     }
   },
@@ -35,7 +35,6 @@ header {
   align-items: center;
   display: flex;
   flex-direction: row;
-  font-size: var(--font-size-2);
   padding: 1.125rem;
 }
 .home {

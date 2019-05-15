@@ -25,7 +25,8 @@ export default {
   /* colors */
   --pink: hsl(6,71%,77%);
   --blue: hsl(185,52%,65%);
-  --cyan: hsl(180, 100%, 50%);
+  --cyan: hsl(180,100%,50%);
+  --purple: hsl(270,55%,36%);
   /* type */
   --font-size-11: 6.706rem;
   --font-size-10: 5.364rem;
@@ -50,7 +51,16 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  background-color: var(--pink);
+  background: linear-gradient(var(--pink), var(--blue));
+}
+
+a {
+  color: var(--purple);
+  text-decoration: none;
+}
+
+a:hover { 
+  background-color: var(--cyan);
 }
 
 *,
