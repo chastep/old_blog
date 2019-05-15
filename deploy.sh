@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+gco master
 
 # abort on errors
 set -e
