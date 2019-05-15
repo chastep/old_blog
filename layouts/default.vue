@@ -7,15 +7,18 @@
     <main class="page-content">
       <nuxt />
     </main>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from '~/components/Header.vue'
+import Footer from '~/components/Footer.vue'
 
 export default {
   components: {
-    Header
+    Header,
+    Footer
   }
 }
 </script>
@@ -74,6 +77,15 @@ a:hover {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.page-content {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex: auto;
+  max-width: 40rem;
+  align-self: center;
 }
 
 .page-content a {
