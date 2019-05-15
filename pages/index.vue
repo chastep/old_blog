@@ -1,11 +1,11 @@
 <template>
   <div class="bio">
-    Hi there, my name is Chase. I'm a tall software engineer currently at
-    <a href="https://www.govisibly.com/">Visibly</a>.
-    I've worked at <a href="https://www.hatchloyalty.com/">Hatch Loyalty</a>
-    and <a href="https://www.colburnhill.com/">Colburn Hill Group</a> in similar roles.
-    I worked in the finance sector at
-    <a href="https://www.pnc.com/en/corporate-and-institutional.html?lnksrc=topnav">PNC Bank</a> in a different life.
+    Hi there, I'm Chase.
+    <br>
+    <br>
+    I'm a software engineer currently working at <a href="https://www.govisibly.com/">Visibly</a>.
+    I've worked at <a href="https://www.hatchloyalty.com/">Hatch Loyalty</a> and <a href="https://www.colburnhill.com/">Colburn Hill Group</a> in similar roles.
+    Welcome!
   </div>
 </template>
 
