@@ -10,7 +10,8 @@
 
     <ul class="social">
       <li v-for="soc in socials" :key="soc.url">
-        <a :href="soc.url" rel="nofollow"><i :class="soc.name"></i></a>
+        <nuxt-link v-if="soc.url === '/info'" :to="soc.url"><i :class="soc.name"></i></nuxt-link>
+        <a v-else :href="soc.url" rel="nofollow"><i :class="soc.name"></i></a>
       </li>
     </ul>
   </header>
@@ -22,6 +23,7 @@ export default {
     return {
       status: undefined,
       socials: [
+        {name: 'fas fa-info-circle fa-lg', url: '/info' },
         {name: 'fas fa-code-branch fa-lg', url: 'https://github.com/chastep'},
         {name: 'fab fa-linkedin fa-lg', url: 'https://www.linkedin.com/in/chase-stephens/'},
       ]
@@ -45,6 +47,12 @@ header {
 .logo {
   order: 2;
   text-align: right;
+}
+
+.fa-bolt:active {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
 }
 
 .logo > svg {
