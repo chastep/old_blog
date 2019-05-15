@@ -3,7 +3,7 @@
     <div class="home">
       <nuxt-link to="/">
         <div class="logo">
-          LOGO HERE
+          <i class="fas fa-tint fa-3x"></i>
         </div>
       </nuxt-link>
     </div>
