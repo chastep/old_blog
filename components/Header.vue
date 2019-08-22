@@ -11,6 +11,7 @@
     <ul class="social">
       <li v-for="soc in socials" :key="soc.url">
         <nuxt-link v-if="soc.url === '/info'" :to="soc.url"><i :class="soc.name"></i></nuxt-link>
+        <nuxt-link v-else-if="soc.url === '/articles'" :to="soc.url"><i :class="soc.name"></i></nuxt-link>
         <a v-else :href="soc.url" rel="nofollow"><i :class="soc.name"></i></a>
       </li>
     </ul>
@@ -24,6 +25,7 @@ export default {
       status: undefined,
       socials: [
         {name: 'fas fa-info-circle fa-lg', url: '/info' },
+        {name: 'far fa-newspaper fa-lg', url: '/articles' },
         {name: 'fas fa-code-branch fa-lg', url: 'https://github.com/chastep'},
         {name: 'fab fa-linkedin fa-lg', url: 'https://www.linkedin.com/in/chase-stephens/'},
       ]

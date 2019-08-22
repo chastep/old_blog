@@ -30,6 +30,7 @@ export default {
   --blue: hsl(185,52%,65%);
   --cyan: hsl(180,100%,50%);
   --purple: hsl(270,55%,36%);
+  --white: hsl(0,0,100);
   /* type */
   --font-size-11: 6.706rem;
   --font-size-10: 5.364rem;
