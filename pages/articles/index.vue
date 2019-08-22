@@ -3,40 +3,65 @@
     <div class="articles-overview">
       These are some of my favorite articles. Enjoy!
     </div>
-    <Article />
+    <carousel
+      :per-page="1"
+      :autoplay="true"
+      :autoplay-timeout=carouselTime
+      :loop=true
+    >
+      <slide v-for="art in articles" :key="art.url">
+        <Article
+          v-bind:name="art.name"
+          v-bind:url="art.url"
+        />
+      </slide>
+    </carousel>
   </div>
 </template>
 
 <script>
 import Article from '~/components/Article.vue'
+import { Carousel, Slide } from 'vue-carousel';
 
 export default {
   data() {
     return {
       status: undefined,
-      socials: [
-        {name: 'fas fa-info-circle fa-lg', url: '/info' },
-        {name: 'far fa-newspaper fa-lg', url: '/articles' },
-        {name: 'fas fa-code-branch fa-lg', url: 'https://github.com/chastep'},
-        {name: 'fab fa-linkedin fa-lg', url: 'https://www.linkedin.com/in/chase-stephens/'},
+      carouselTime: 4000,
+      articles: [
+        {
+          name: "NYT: It's Time to Break Up Facebook", 
+          url: 'https://www.nytimes.com/2019/05/09/opinion/sunday/chris-hughes-facebook-zuckerberg.html'
+        },
+        {
+          name: "Google Fights Back",
+          url: 'https://stratechery.com/2019/google-fights-back/'
+        },
+        {
+          name: '2019 Stack Overflow Developer Survey',
+          url: 'https://stackoverflow.blog/2019/04/09/the-2019-stack-overflow-developer-survey-results-are-in/'
+        }
       ]
     }
   },
   components: {
-    Article
+    Article,
+    Carousel,
+    Slide
   }
 }
 </script>
 
 <style>
 .articles-container {
-
+  max-width: 85%;
 }
 .articles-overview {
   text-align: center;
   font-size: var(--font-size-4);
   font-weight: 700;
   padding: 1.125rem;
+  margin-bottom: 5rem;
   text-transform: lowercase;
 }
 </style>

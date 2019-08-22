@@ -1,31 +1,44 @@
 <template>
   <div class="article-container">
-    article
+    <a :href="url" rel="nofollow" class="article-url"><i class="far fa-paper-plane fa-lg"></i></a>
+    <div class="article-title">
+      {{ name }}
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      status: undefined,
-      socials: [
-        {name: 'fas fa-info-circle fa-lg', url: '/info' },
-        {name: 'far fa-newspaper fa-lg', url: '/articles' },
-        {name: 'fas fa-code-branch fa-lg', url: 'https://github.com/chastep'},
-        {name: 'fab fa-linkedin fa-lg', url: 'https://www.linkedin.com/in/chase-stephens/'},
-      ]
-    }
-  },
+  props: ['name', 'url']
 }
 </script>
 
 <style>
 .article-container {
   text-align: center;
-  font-size: var(--font-size-4);
-  font-weight: 700;
+  font-size: var(--font-size-3);
+  font-weight: 600;
   padding: 1.125rem;
-  text-transform: lowercase;
+  border: 2px solid white;
+  border-radius: 1rem;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.article-container:hover {
+  border-color: var(--cyan);
+}
+
+.article-url {
+  float: left;
+  width: 15%;
+  height: 100%;
+}
+
+.article-title {
+  float: right;
+  width: 85%;
 }
 </style>
