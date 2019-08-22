@@ -3,25 +3,20 @@
     <div class="articles-overview">
       These are some of my favorite articles. Enjoy!
     </div>
-    <carousel
-      :per-page="1"
-      :autoplay="true"
-      :autoplay-timeout=carouselTime
-      :loop=true
-    >
-      <slide v-for="art in articles" :key="art.url">
+    <ul class="articles-list">
+      <li v-for="art in articles" :key="art.url">
         <Article
           v-bind:name="art.name"
           v-bind:url="art.url"
         />
-      </slide>
-    </carousel>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
 import Article from '~/components/Article.vue'
-import { Carousel, Slide } from 'vue-carousel';
+// import { Carousel, Slide } from 'vue-carousel';
 
 export default {
   data() {
@@ -46,22 +41,27 @@ export default {
   },
   components: {
     Article,
-    Carousel,
-    Slide
+    // Carousel,
+    // Slide
   }
 }
 </script>
 
 <style>
 .articles-container {
-  max-width: 85%;
 }
 .articles-overview {
   text-align: center;
   font-size: var(--font-size-4);
   font-weight: 700;
   padding: 1.125rem;
-  margin-bottom: 5rem;
   text-transform: lowercase;
+}
+.articles-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 0px;
 }
 </style>
