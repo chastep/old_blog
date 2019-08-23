@@ -6,8 +6,10 @@
     <ul class="articles-list">
       <li v-for="art in articles" :key="art.url">
         <Article
-          v-bind:name="art.name"
           v-bind:url="art.url"
+          v-bind:category="art.category"
+          v-bind:name="art.name"
+          v-bind:desc="art.desc"
         />
       </li>
     </ul>
@@ -25,16 +27,22 @@ export default {
       carouselTime: 4000,
       articles: [
         {
-          name: "NYT: It's Time to Break Up Facebook", 
-          url: 'https://www.nytimes.com/2019/05/09/opinion/sunday/chris-hughes-facebook-zuckerberg.html'
+          url: 'https://www.nytimes.com/2019/05/09/opinion/sunday/chris-hughes-facebook-zuckerberg.html',
+          category: 'News',
+          name: "NYT: It's Time to Break Up Facebook",
+          desc: 'NYT article on why FB should be split up',
         },
         {
+          url: 'https://stratechery.com/2019/google-fights-back/',
+          category: 'News',
           name: "Google Fights Back",
-          url: 'https://stratechery.com/2019/google-fights-back/'
+          desc: 'Ben Thompson article on recent google initatives',
         },
         {
+          url: 'https://stackoverflow.blog/2019/04/09/the-2019-stack-overflow-developer-survey-results-are-in/',
+          category: 'News',
           name: '2019 Stack Overflow Developer Survey',
-          url: 'https://stackoverflow.blog/2019/04/09/the-2019-stack-overflow-developer-survey-results-are-in/'
+          desc: 'Annual Stack Overflow dev survey results',
         }
       ]
     }
