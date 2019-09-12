@@ -17,6 +17,9 @@ $ yarn start
 
 # generate static project
 $ yarn run generate
+
+# to deploy updates (git checkout dev)
+$ ./deploy.sh
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
