@@ -3,8 +3,8 @@
     Hi there, I'm Chase.
     <br>
     <br>
-    I'm a software engineer currently working at <a href="https://www.govisibly.com/">Visibly</a>.
-    I've worked at <a href="https://www.hatchloyalty.com/">Hatch Loyalty</a> and <a href="https://www.colburnhill.com/">Colburn Hill Group</a> in similar roles.
+    I'm a software engineer currently working at <a class="text-link" href="https://www.govisibly.com/">Visibly</a>.
+    I've worked at <a class="text-link" href="https://www.hatchloyalty.com/">Hatch Loyalty</a> and <a class="text-link" href="https://www.colburnhill.com/">Colburn Hill Group</a> in similar roles.
     Welcome!
   </div>
 </template>

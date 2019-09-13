@@ -58,20 +58,20 @@ html {
   background: linear-gradient(var(--pink), var(--blue));
 }
 
-a {
-  color: var(--purple);
-  text-decoration: none;
-}
-
-a:hover { 
-  background-color: var(--cyan);
-}
-
 *,
 *:before,
 *:after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.text-link {
+  color: var(--purple);
+  text-decoration: none;
+}
+
+.text-link:hover {
+  background-color: var(--cyan);
 }
 
 .page-container {

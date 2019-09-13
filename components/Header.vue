@@ -3,7 +3,7 @@
     <div class="home">
       <nuxt-link to="/">
         <div class="logo">
-          <i class="fas fa-bolt fa-3x"></i>
+          <i class="fas fa-bolt fa-3x icon"></i>
         </div>
       </nuxt-link>
     </div>
@@ -24,10 +24,10 @@ export default {
     return {
       status: undefined,
       socials: [
-        {name: 'fas fa-info-circle fa-lg', url: '/info' },
-        {name: 'far fa-newspaper fa-lg', url: '/articles' },
-        {name: 'fas fa-code-branch fa-lg', url: 'https://github.com/chastep'},
-        {name: 'fab fa-linkedin fa-lg', url: 'https://www.linkedin.com/in/chase-stephens/'},
+        {name: 'fas fa-info-circle fa-lg icon', url: '/info' },
+        {name: 'far fa-newspaper fa-lg icon', url: '/articles' },
+        {name: 'fas fa-code-branch fa-lg icon', url: 'https://github.com/chastep'},
+        {name: 'fab fa-linkedin fa-lg icon', url: 'https://www.linkedin.com/in/chase-stephens/'},
       ]
     }
   },
@@ -51,19 +51,8 @@ header {
   text-align: right;
 }
 
-.fa-bolt:active {
-  transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-}
-
-.logo > svg {
-  display: inline-block;
-  transition: .33s ease-out;
-}
-
-.logo > svg:hover {
-  opacity: 1;
+.icon:hover {
+  color: var(--cyan);
 }
 
 .social {
@@ -80,5 +69,26 @@ header {
 
 .social li:not(:last-child) {
   margin-right: 0.72rem;
+}
+
+.fa-bolt:hover {
+  animation: shake 1s;
+}
+
+/*https://www.w3schools.com/howto/howto_css_shake_image.asp*/
+/*https://codepen.io/jlong64/pen/jwJpc*/
+/*^next time*/
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 </style>
