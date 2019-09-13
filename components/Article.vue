@@ -1,5 +1,5 @@
 <template>
-  <a :href="url" rel="nofollow" class="card-link">
+  <a :href="url" target="_blank" class="card-link">
     <article class="article-card">
       <i class="fas fa-paper-plane fa-3x card-image"></i>
       <div class="article-details">
@@ -23,14 +23,6 @@ export default {
   display: block;
   color: inherit;
   text-decoration: none;
-  /*&:hover .card-title {
-    transition: 0.3s ease;
-    color: var(--purple);
-  }
-  &:hover .card-image {
-    transition: 0.3s ease;
-    opacity: 0.9;
-  }*/
 }
 
 .article-card {
@@ -43,10 +35,18 @@ export default {
   justify-content: center;
   margin: 0 1rem 1rem 1rem;
   align-items: center;
+  opacity: 0.75;
+}
+
+.article-card:hover {
+  opacity: 1;
+}
+
+.article-card:hover > .card-image {
+  color: var(--cyan);
 }
 
 .card-image {
-  /*@include transition(opacity 0.3s ease);*/
   display: block;
   width: 100%;
   height: 100%;
@@ -72,7 +72,6 @@ export default {
 }
 
 .card-title {
-  /*@include transition(color 0.3s ease);*/
   font-size: 1.125rem;
   line-height: 1.4;
   font-weight: 700;

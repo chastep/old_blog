@@ -56,8 +56,8 @@ export default {
 </script>
 
 <style>
-.articles-container {
-}
+.articles-container {}
+
 .articles-overview {
   text-align: center;
   font-size: var(--font-size-4);
@@ -65,6 +65,7 @@ export default {
   padding: 1.125rem;
   text-transform: lowercase;
 }
+
 .articles-list {
   list-style: none;
   display: flex;
