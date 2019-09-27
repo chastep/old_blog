@@ -22,7 +22,6 @@ import Article from '~/components/Article.vue'
 export default {
   data() {
     return {
-      status: undefined,
       articles: [
         {
           url: 'https://www.nytimes.com/2019/05/09/opinion/sunday/chris-hughes-facebook-zuckerberg.html',
