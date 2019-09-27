@@ -72,7 +72,7 @@ header {
 }
 
 .fa-bolt:hover {
-  animation: bounce-nice 4000ms infinite;
+  animation: bounce-nice 2000ms infinite;
   animation-timing-function: linear;
 }
 
