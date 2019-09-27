@@ -18,6 +18,7 @@ export default {
 </script>
 
 <style>
+/* https://vuejsexamples.com/a-simple-and-responsive-card-ui-component-made-with-vue-js/ */
 .card-link {
   position: relative;
   display: block;
