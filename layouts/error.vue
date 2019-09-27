@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <h1 v-if="error.statusCode === 404">Page not found! Ouch!</h1>
+    <!-- https://emojipedia.org -->
+    <h1 v-if="error.statusCode === 404">⛔ page not found ⛔</h1>
     <h1 v-else>An error occurred</h1>
   </div>
 </template>
