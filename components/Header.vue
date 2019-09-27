@@ -72,23 +72,25 @@ header {
 }
 
 .fa-bolt:hover {
-  animation: shake 1s;
+  animation: bounce-nice 4000ms infinite;
+  animation-timing-function: linear;
 }
 
-/*https://www.w3schools.com/howto/howto_css_shake_image.asp*/
-/*https://codepen.io/jlong64/pen/jwJpc*/
-/*^next time*/
-@keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
+@keyframes bounce-nice {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+      transform: translateY(-10px);
+  }
+  50% {
+      transform: translateY(0);
+  }
+  75% {
+      transform: translateY(10px);
+  }
+  100% {
+      transform: translateY(0);
+  }
 }
 </style>
