@@ -1,32 +1,33 @@
 <template>
-  <a :href="url" target="_blank" class="card-link">
-    <article class="article-card">
-      <i class="fas fa-paper-plane fa-3x card-image"></i>
-      <div class="article-details">
-        <h4 class="card-category">{{ category }}</h4>
-        <h3 class="card-title">{{ name }}</h3>
-        <p class="card-description">{{ desc }}</p>
+  <nuxt-link :to="'/posts/' + post.attributes.name">
+    <article class="postcard">
+      <i class="fas fa-paper-plane fa-3x postcard-image"></i>
+      <div class="postcard-details">
+        <h4 class="postcard-tags">{{ post.attributes.tags }}</h4>
+        <h3 class="postcard-title">
+          {{post.attributes.title}}
+        </h3>
+        <p class="postcard-description">
+          {{ post.attributes.description }}
+        </p>
       </div>
     </article>
-  </a>
+  </nuxt-link>
 </template>
 
 <script>
-export default {
-  props: ['url', 'category', 'name', 'desc']
-}
+  export default {
+    props: {
+      post: {
+        type: Object
+      }
+    }
+  }
 </script>
 
 <style>
 /* https://vuejsexamples.com/a-simple-and-responsive-card-ui-component-made-with-vue-js/ */
-.card-link {
-  position: relative;
-  display: block;
-  color: inherit;
-  text-decoration: none;
-}
-
-.article-card {
+.postcard {
   display: flex;
   flex-direction: row;
   background: #fff;
@@ -39,15 +40,15 @@ export default {
   opacity: 0.75;
 }
 
-.article-card:hover {
+.postcard:hover {
   opacity: 1;
 }
 
-.article-card:hover > .card-image {
+.postcard:hover > .postcard-image {
   color: var(--cyan);
 }
 
-.card-image {
+.postcard-image {
   display: block;
   width: 100%;
   height: 100%;
@@ -55,12 +56,13 @@ export default {
   color: var(--purple);
 }
 
-.article-details {
+.postcard-details {
   padding: 1.5rem;
   width: 75%;
+  color: black;
 }
 
-.card-category {
+.postcard-category {
   display: inline-block;
   text-transform: uppercase;
   font-size: 0.75rem;
@@ -72,14 +74,14 @@ export default {
   border-bottom: 0.125rem solid #ebebeb;
 }
 
-.card-title {
+.postcard-title {
   font-size: 1.125rem;
   line-height: 1.4;
   font-weight: 700;
   margin: 0 0 0.5rem 0;
 }
 
-.card-description {
+.postcard-description {
   text-overflow: ellipsis;
 }
 </style>

@@ -12,7 +12,8 @@
       <li v-for="soc in socials" :key="soc.url">
         <nuxt-link v-if="soc.url === '/info'" :to="soc.url"><i :class="soc.name"></i></nuxt-link>
         <nuxt-link v-else-if="soc.url === '/articles'" :to="soc.url"><i :class="soc.name"></i></nuxt-link>
-        <a v-else :href="soc.url" rel="nofollow"><i :class="soc.name"></i></a>
+        <nuxt-link v-else-if="soc.url === '/posts'" :to="soc.url"><i :class="soc.name"></i></nuxt-link>
+        <a v-else :href="soc.url" rel="nofollow" target="_blank"><i :class="soc.name"></i></a>
       </li>
     </ul>
   </header>
@@ -24,8 +25,9 @@ export default {
     return {
       status: undefined,
       socials: [
-        {name: 'fas fa-info-circle fa-lg icon', url: '/info' },
-        {name: 'far fa-newspaper fa-lg icon', url: '/articles' },
+        {name: 'fas fa-info-circle fa-lg icon', url: '/info'},
+        {name: 'far fa-newspaper fa-lg icon', url: '/articles'},
+        {name: 'fas fa-rss-square fa-lg icon', url: '/posts'},
         {name: 'fas fa-code-branch fa-lg icon', url: 'https://github.com/chastep'},
         {name: 'fab fa-linkedin fa-lg icon', url: 'https://www.linkedin.com/in/chase-stephens/'},
       ]
@@ -72,23 +74,26 @@ header {
 }
 
 .fa-bolt:hover {
-  animation: shake 1s;
+  animation: bounce-nice 2000ms infinite;
+  animation-timing-function: linear;
 }
 
-/*https://www.w3schools.com/howto/howto_css_shake_image.asp*/
-/*https://codepen.io/jlong64/pen/jwJpc*/
-/*^next time*/
-@keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
+/* https://github.com/manniL/lichter.io/blob/d6abc7da7c1cbc8e2df0b7ddd22af5bcb78d400e/components/AboutMe.vue */
+@keyframes bounce-nice {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+      transform: translateY(-10px);
+  }
+  50% {
+      transform: translateY(0);
+  }
+  75% {
+      transform: translateY(10px);
+  }
+  100% {
+      transform: translateY(0);
+  }
 }
 </style>

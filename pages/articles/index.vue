@@ -18,13 +18,10 @@
 
 <script>
 import Article from '~/components/Article.vue'
-// import { Carousel, Slide } from 'vue-carousel';
 
 export default {
   data() {
     return {
-      status: undefined,
-      carouselTime: 4000,
       articles: [
         {
           url: 'https://www.nytimes.com/2019/05/09/opinion/sunday/chris-hughes-facebook-zuckerberg.html',
@@ -49,15 +46,11 @@ export default {
   },
   components: {
     Article,
-    // Carousel,
-    // Slide
   }
 }
 </script>
 
 <style>
-.articles-container {}
-
 .articles-overview {
   text-align: center;
   font-size: var(--font-size-4);
