@@ -3,8 +3,9 @@
 # abort on errors
 set -e
 
-# build
-npm run build
+# generate
+rm -rf dist
+yarn generate
 
 # navigate into the build output directory
 cd dist

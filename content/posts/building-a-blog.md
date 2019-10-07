@@ -1,9 +1,9 @@
 ---
 name: 'building-a-blog'
 title: Building A Blog
-date: 07 October 2019
+date: October 7 2019
 id: 'building-a-blog'
-tags: 'self blog'
+tags: [self, blog]
 description: I'm building a blog, it's an interesting learning experience.
 ---
 
