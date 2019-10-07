@@ -51,8 +51,6 @@ export default {
 </script>
 
 <style>
-.articles-container {}
-
 .articles-overview {
   text-align: center;
   font-size: var(--font-size-4);

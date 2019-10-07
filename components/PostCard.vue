@@ -59,6 +59,7 @@
 .postcard-details {
   padding: 1.5rem;
   width: 75%;
+  color: black;
 }
 
 .postcard-category {

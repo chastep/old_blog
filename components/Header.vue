@@ -13,7 +13,7 @@
         <nuxt-link v-if="soc.url === '/info'" :to="soc.url"><i :class="soc.name"></i></nuxt-link>
         <nuxt-link v-else-if="soc.url === '/articles'" :to="soc.url"><i :class="soc.name"></i></nuxt-link>
         <nuxt-link v-else-if="soc.url === '/posts'" :to="soc.url"><i :class="soc.name"></i></nuxt-link>
-        <a v-else :href="soc.url" rel="nofollow"><i :class="soc.name"></i></a>
+        <a v-else :href="soc.url" rel="nofollow" target="_blank"><i :class="soc.name"></i></a>
       </li>
     </ul>
   </header>

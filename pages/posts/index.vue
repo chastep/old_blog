@@ -18,7 +18,7 @@ import PostCard from '~/components/PostCard.vue'
 
 export default {
   async asyncData() {
-    const resolve = require.context("~/content/posts/", true, /\.md$/)
+    const resolve = require.context("~/content/posts/", true, /^((?!test.).)*md$/)
     const imports = resolve.keys().map((key) => {
       const [, name] = key.match(/\/(.+)\.md$/);
       return resolve(key);
