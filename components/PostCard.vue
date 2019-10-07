@@ -3,12 +3,15 @@
     <article class="postcard">
       <i class="fas fa-paper-plane fa-3x postcard-image"></i>
       <div class="postcard-details">
-        <h4 class="postcard-tags">{{ post.attributes.tags }}</h4>
+        <h4 class="postcard-tags">{{ post.attributes.tags.join(', ') }}</h4>
         <h3 class="postcard-title">
           {{post.attributes.title}}
         </h3>
         <p class="postcard-description">
           {{ post.attributes.description }}
+        </p>
+        <p class="postcard-date">
+          {{ post.attributes.date }}
         </p>
       </div>
     </article>
@@ -62,9 +65,9 @@
   color: black;
 }
 
-.postcard-category {
+.postcard-tags {
   display: inline-block;
-  text-transform: uppercase;
+  font-style: italic;
   font-size: 0.75rem;
   font-weight: 700;
   line-height: 1;
@@ -83,5 +86,8 @@
 
 .postcard-description {
   text-overflow: ellipsis;
+  margin: 0 0 0.75rem 0;
+  padding: 0 0 0.25rem 0;
+  border-bottom: 0.125rem solid #ebebeb;
 }
 </style>

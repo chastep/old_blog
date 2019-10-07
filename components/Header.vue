@@ -53,6 +53,10 @@ header {
   text-align: right;
 }
 
+.icon {
+  color: var(--purple);
+}
+
 .icon:hover {
   color: var(--cyan);
 }

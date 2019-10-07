@@ -1,7 +1,10 @@
 <template>
   <div class="post-container">
     <div class="post-title">
-      <h1>{{post.attributes.title}}</h1>
+      <h1>{{ post.attributes.title }}</h1>
+    </div>
+    <div class="post-date-tags">
+      <span>{{ post.attributes.date }} /// {{ post.attributes.tags.join(', ') }}</span>
     </div>
     <div class="post-content" v-html="post.html"></div>
   </div>
@@ -33,6 +36,11 @@ export default {
 
 .post-title {
   margin: inherit;
+}
+
+.post-date-tags {
+  margin: inherit;
+  font-size: var(--font-size-3);
   border-bottom: solid var(--cyan) 2px;
 }
 
@@ -58,6 +66,9 @@ export default {
 @media screen and (max-width: 601px) {
   .post-container {
     font-size: var(--font-size-2);
+  }
+  .post-date-tags {
+    font-size: var(--font-size-1); 
   }
 }
 </style>
