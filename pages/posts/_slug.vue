@@ -30,7 +30,7 @@ export default {
 
 <style>
 .post-container {
-  margin: 1rem 3rem 1rem 3rem;
+  margin: 2rem 5rem;
   font-size: var(--font-size-4);
 }
 
@@ -46,6 +46,8 @@ export default {
 
 .post-content {
   margin: inherit;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .post-content > p {
